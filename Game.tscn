@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://SlotDigit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://SlotDigits.gd" type="Script" id=2]
+
+[node name="Game" type="Node2D"]
+
+[node name="SlotDigits" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Digits" type="Node2D" parent="SlotDigits"]
+
+[node name="Hundreds" parent="SlotDigits/Digits" instance=ExtResource( 1 )]
+position = Vector2( 117.39, 26.4866 )
+
+[node name="Tens" parent="SlotDigits/Digits" instance=ExtResource( 1 )]
+position = Vector2( 125.39, 26.4866 )
+
+[node name="Ones" parent="SlotDigits/Digits" instance=ExtResource( 1 )]
+position = Vector2( 133.39, 26.4866 )
+
+[node name="Timer" type="Timer" parent="SlotDigits"]
